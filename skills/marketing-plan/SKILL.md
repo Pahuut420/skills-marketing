@@ -1,7 +1,6 @@
 ---
 name: marketing-plan
-version: 1.0.0
-description: When the user needs to build a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions "marketing plan," "growth plan," "GTM plan," "go-to-market plan," "AARRR plan," "90-day marketing plan," "12-month marketing roadmap," "fractional CMO plan," "fCMO plan," or wants a "comprehensive marketing strategy document." Generates an exhaustive 13-section plan structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to the client's current budget, team, and stage, mapped to future funding milestones, cross-referenced with the 139-idea marketing-ideas library and the 17-section audit-marketing rubric, with a full marketing operations stack showing which skills and MCP/API integrations execute each part. Outputs a Notion-paste-ready markdown document. For scoring current state, see audit-marketing. For positioning before planning, see positioning. For stage-specific deep work, see onboarding, signup, emails, referrals, pricing.
+description: When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions "marketing plan," "growth plan," "GTM plan," "go-to-market plan," "AARRR plan," "90-day marketing plan," "12-month marketing roadmap," "fractional CMO plan," or "fCMO plan." Generates an exhaustive 13-section plan structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to the client's current budget, team, and stage, mapped to future funding milestones, cross-referenced with the 139-idea marketing-ideas library and the 17-section audit-marketing rubric, with a full marketing operations stack showing which skills and MCP/API integrations execute each part. Outputs a Notion-paste-ready markdown document. For scoring current state, see audit-marketing. For positioning before planning, see positioning. For stage-specific deep work, see onboarding, signup, emails, referrals, pricing.
 ---
 
 # Marketing Plan
@@ -33,9 +32,7 @@ Examples:
 - `/marketing-plan acme-saas`
 - `/marketing-plan` (will prompt for client name)
 
-On invocation, the skill auto-detects whether this is a new plan or an in-progress one:
-- If `~/marketing-plans/{client-slug}/` exists with a `research.md` or any phase markers, **resume** from the last completed phase.
-- If no folder exists, **initialize** a new one.
+On invocation, the skill reads `~/marketing-plans/{client-slug}/progress.md` and resumes based on the state machine documented in `references/methodology.md` Step 1.1.2 (fresh → INIT → REVIEW → FINALIZE → finalized). Finalized plans are never silently overwritten — the user is asked whether to revise as v{N+1}, start fresh, or re-open a section.
 
 ## The three phases
 
@@ -101,13 +98,15 @@ The plan's "Current State" section scores the client against the 17-section `aud
 
 If the user has already run `/audit-marketing` on this client, ingest the scored output directly. If not, offer to run it before drafting Section 3, OR use the rubric as a lens against existing materials (faster, less rigorous — useful when client provides rich context but a formal audit hasn't happened).
 
-## Cross-references — the three external skills this plan depends on
+## Cross-references — skills this plan integrates with
 
-1. **`marketing-ideas`** — 139 proven marketing tactics. Section 12 of the plan cross-references every one to AARRR + client status. Detail in `references/idea-cross-reference.md`.
-2. **`audit-marketing`** — 17-section scored rubric. Section 3 of the plan uses this as the scoring lens. Detail in `references/current-state-rubric.md`.
-3. **All AARRR-stage-specific skills** — `onboarding`, `signup`, `emails`, `referrals`, `pricing`, etc. The "Marketing operations stack" (Section 11) maps these to AARRR stages.
+Some referenced skills live in this `marketingskills` repo; others live in adjacent Claude Code marketplaces (notably `cf-skills` for `audit-marketing` and `positioning`). The plan still works without external skills — it falls back to using the embedded rubric as a lens (see `references/current-state-rubric.md`).
 
-The plan is **opinionated about which skills serve which stages.** Full mapping in `references/ops-stack-mapping.md`.
+1. **`marketing-ideas`** *(this repo)* — 139 proven marketing tactics. Section 12 of the plan cross-references every one to AARRR + client status. Detail in `references/idea-cross-reference.md`.
+2. **`audit-marketing`** *(external — `cf-skills` repo)* — 17-section scored rubric. Section 3 uses this as the scoring lens; falls back to lens-only mode if the skill isn't installed.
+3. **AARRR-stage-specific skills** *(mostly this repo)* — `onboarding`, `signup`, `emails`, `referrals`, `pricing`, etc. The "Marketing operations stack" (Section 11) maps these to AARRR stages.
+
+The plan is **opinionated about which skills serve which stages.** Full mapping in `references/ops-stack-mapping.md` (which also lists optional external skills and substitutions).
 
 ## The marketing operations stack
 
@@ -192,11 +191,16 @@ Length expectation: ~8,000–12,000 words for a comprehensive plan. Shorter is f
 ```
 ~/marketing-plans/
 └── {client-slug}/
-    ├── materials/        # Client-provided files (positioning, decks, audit output, etc.)
-    ├── research.md       # Research record written during INIT
-    ├── progress.md       # Section-by-section progress tracker (REVIEW phase)
-    └── final_plan.md     # The finished plan (FINALIZE output)
+    ├── materials/         # Client-provided files (decks, audit output, brand-voice doc, etc.)
+    ├── research.md        # Research record written during INIT
+    ├── progress.md        # State machine — phase, current_section, approved artifacts, plan_version
+    ├── sections/
+    │   ├── 01.md          # Each approved section saved as a canonical artifact
+    │   └── ...            # Zero-padded so they sort in order
+    └── final_plan.md      # Compiled deliverable (FINALIZE output)
 ```
+
+The full schema for `progress.md` and the resumption decision tree live in `references/methodology.md` Steps 1.1.1 and 1.1.2.
 
 ## Related skills
 

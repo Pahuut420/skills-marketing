@@ -8,14 +8,67 @@ The three-phase workflow that produces a comprehensive marketing plan. SKILL.md 
 
 ### Step 1.1 — Set up the plan folder
 
+Canonical file layout for every plan:
+
 ```
 ~/marketing-plans/{client-slug}/
-├── materials/        # Client-provided files go here
-├── research.md       # Written by this phase
-└── progress.md       # Phase markers, updated as REVIEW progresses
+├── materials/         # Client-provided files (decks, audit output, brand-voice doc, etc.)
+├── research.md        # Written in Phase 1 (INIT)
+├── progress.md        # State machine — see Step 1.1.1 for schema
+├── sections/
+│   ├── 01.md          # Executive summary (written last, ordered first)
+│   ├── 02.md          # Strategic frame
+│   ├── ...
+│   └── 13.md          # Measurement, RACI, open decisions, appendix
+└── final_plan.md      # Compiled deliverable (Phase 3 output)
 ```
 
-If `~/marketing-plans/{client-slug}/research.md` already exists, this is a resumed plan — skip to Phase 2.
+### Step 1.1.1 — `progress.md` state schema
+
+Every plan tracks a single `progress.md` file at the plan root. It's the source of truth for resumption. Schema:
+
+```markdown
+# {Client} — Marketing Plan Progress
+
+phase: init | review | finalize | finalized
+current_section: <number, only meaningful during review phase>
+plan_version: v1
+last_updated: YYYY-MM-DD HH:MM
+
+## Sections completed
+- [ ] 2. Strategic frame
+- [ ] 3. Current state
+- [ ] 4. Acquisition
+- [ ] 5. Activation
+- [ ] 6. Retention
+- [ ] 7. Referral
+- [ ] 8. Revenue
+- [ ] 9. 90-day roadmap
+- [ ] 10. 12-month outlook
+- [ ] 11. Marketing operations stack
+- [ ] 12. Tactical idea bank
+- [ ] 13. Measurement, RACI, open decisions, appendix
+- [ ] 1. Executive summary (synthesized last)
+
+## Approved artifacts
+sections/02.md, sections/03.md, ... (list as they're written)
+
+## Notes
+<any open decisions, blockers, or out-of-band context that aren't in research.md>
+```
+
+### Step 1.1.2 — Resumption decision tree
+
+On every invocation, check state in this order:
+
+1. **No `{client-slug}/` folder** → fresh plan. Create folder + `materials/` + empty `sections/`. Start INIT (Step 1.2).
+2. **Folder exists, no `research.md`** → INIT was interrupted. Resume from Step 1.2.
+3. **`research.md` exists, no `progress.md`** → INIT done, REVIEW not started. Create `progress.md`, start REVIEW from Section 2.
+4. **`progress.md` exists, `phase: review`** → REVIEW in progress. Resume from `current_section` (or first unchecked box).
+5. **`progress.md` exists, `phase: finalize`** → FINALIZE was interrupted. Re-run Phase 3.
+6. **`progress.md` exists, `phase: finalized`** → plan is done. **Do not silently overwrite.** Ask the user: *"This plan is finalized (v{N}). Want to (a) revise it as v{N+1}, (b) start a fresh plan in a new folder, or (c) re-open a specific section?"*
+
+Update `phase` and `last_updated` whenever state changes.
 
 ### Step 1.2 — Read existing materials
 
@@ -200,39 +253,24 @@ Save. Move to Phase 2.
 
 ### Step 2.1 — Initialize progress.md
 
-```markdown
-# {Client} — Marketing Plan Progress
+Use the schema defined in Step 1.1.1 above. Set `phase: review`, `current_section: 2`, `plan_version: v1`, and stamp `last_updated`.
 
-## Sections completed
-- [ ] 1. Executive summary
-- [ ] 2. Strategic frame
-- [ ] 3. Current state
-- [ ] 4. Acquisition
-- [ ] 5. Activation
-- [ ] 6. Retention
-- [ ] 7. Referral
-- [ ] 8. Revenue
-- [ ] 9. 90-day roadmap
-- [ ] 10. 12-month outlook
-- [ ] 11. Marketing operations stack
-- [ ] 12. Tactical idea bank
-- [ ] 13. Measurement, RACI, open decisions, appendix
-```
+### Step 2.2 — Walk each section in this order: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, then 1
 
-### Step 2.2 — Walk each section in order
+Section 1 (Executive Summary) is drafted **last** because it depends on every other section's conclusions. Walk Sections 2 → 13 in numeric order, then synthesize Section 1 from the others. The final compiled `final_plan.md` is always presented in canonical order 1 → 13.
 
 For each section, use the template at `references/plan-template.md` to draft. Then in chat:
 
 1. Present the draft (or key bullets — short sections inline, long sections as bullet outline first)
 2. Ask: *"Approve, adjust, or expand?"*
 3. Iterate until user confirms
-4. Save the confirmed text to a per-section file (`section-1.md`, `section-2.md`, etc.) or to a single growing `draft_plan.md`
+4. Save the confirmed text to `sections/01.md` ... `sections/13.md` (one file per section, zero-padded for sort order). This is the canonical persisted artifact — recovery depends on it.
 5. Check the box in `progress.md`
 6. Move to next section
 
 ### Step 2.3 — Section-specific guidance
 
-**Section 1 (Executive summary)** is typically drafted **last** in actual writing time — easier after all the other sections exist. But present it first in the output document.
+**Section 1 (Executive summary)** is synthesized from Sections 2–13 after they're all approved. Draft it last; present it first in the output document.
 
 **Section 3 (Current state)** is where audit-marketing output gets integrated. If a formal audit was run, paste the scored rubric. If not, use the rubric as a lens (see `references/current-state-rubric.md`).
 
@@ -262,7 +300,7 @@ If a section's draft violates the brand voice, redo it before showing it to the 
 
 ### Step 3.1 — Compile
 
-Concatenate all 13 sections into `final_plan.md`. Add:
+Set `phase: finalize` in `progress.md` before starting. Concatenate `sections/01.md` through `sections/13.md` into `final_plan.md` (canonical order 1 → 13, regardless of drafting order). Add:
 - Title header with date and "v1" version marker
 - "Prepared by / For / Date / Status" frontmatter
 - Section anchors that work in Notion paste
@@ -271,7 +309,7 @@ Concatenate all 13 sections into `final_plan.md`. Add:
 
 Before printing:
 
-- **Cross-reference check** — every marketing-ideas number (e.g., "idea #17") matches the actual idea in `references/idea-cross-reference.md`. Every related-skill mention exists in the marketingskills repo.
+- **Cross-reference check** — every marketing-ideas number (e.g., "idea #17") matches the actual idea in `references/idea-cross-reference.md`. Every related-skill mention either exists in the `marketingskills` repo or is documented as an external dependency (see ops-stack-mapping note on cross-marketplace skills).
 - **MCP/API check** — every tool mentioned in Section 11 actually exists in the user's stack (per research.md intake) OR is flagged as "future / not yet wired."
 - **Path check** — no machine-specific paths (`/Users/...`, `/home/...`) in the output. Replace with descriptive references.
 - **Voice check** — final read against brand voice rules. Flag and fix violations.
@@ -299,13 +337,18 @@ If yes:
 
 If no: leave it local. Done.
 
+### Step 3.5 — Mark finalized
+
+Set `phase: finalized` in `progress.md` and stamp `last_updated`. This is the terminal state and prevents future `/marketing-plan` invocations from silently overwriting the plan (see Step 1.1.2 case 6).
+
 ---
 
 ## Resuming a plan
 
-If `progress.md` shows incomplete sections, resume from the next unfinished. Skip Phase 1 entirely. Open `research.md` to refresh context, then dive into the next section.
+Resumption is governed entirely by the decision tree in Step 1.1.2 above — always check state in that order on every invocation.
 
-If the user says *"start over"* or *"redo Section X,"* respect that — reset that section's progress marker and re-draft.
+If the user says *"start over"* → ask whether they want to delete the existing folder or move it to `archive/` first; don't silently overwrite.
+If the user says *"redo Section X"* → uncheck that box in `progress.md`, delete `sections/0X.md`, and re-draft.
 
 ## Failure modes to watch for
 

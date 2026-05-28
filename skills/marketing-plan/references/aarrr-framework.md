@@ -6,8 +6,10 @@ AARRR (Dave McClure's "pirate metrics") is the spine of every plan produced by t
 
 | Stage | Question | Common metrics |
 |---|---|---|
-| **A**cquisition | How do strangers become aware of us? | Visits, MQLs, signups, app installs, CAC by channel |
-| **A**ctivation | Once they try us, do they have an experience that converts? | Time-to-value, % completing first key action, trial → paid rate |
+| **A**cquisition | How do strangers become aware of us? | Visits, MQLs, signup-page sessions, app-store visits, CAC by channel |
+| **A**ctivation | Once they try us, do they have an experience that converts? | Signup completion rate, time-to-value, % completing first key action, trial → paid rate |
+
+> **Signup boundary rule.** Signup *intent* (a stranger landing on the signup page) is Acquisition. Signup *completion* and everything after (first key action, trial-to-paid) is Activation. Apply this rule consistently across all docs and the plan template.
 | **R**etention | Do they stay and deepen? | DAU/WAU/MAU, week-1/4/12 retention, churn |
 | **R**eferral | Do retained users bring more users? | Viral coefficient, NPS, ambassador attribution |
 | **R**evenue | What do they pay, who pays, how does it compound? | ARPU, LTV, expansion revenue, ARR / MRR |

@@ -24,6 +24,8 @@ Use this as the "what good looks like" reference when drafting a new plan. The s
 **Date:** 2026-05-27
 **Status:** Draft v1 — for team review
 
+## 1. Executive summary
+
 Olo has built something rare: a clinically validated, brand-coherent, founder-led product in a category that doesn't yet have a name. The opportunity in the next twelve months is not to invent a marketing engine from scratch — it's to **convert the existing organic gravity into a measurable, repeatable funnel**, then layer paid acquisition on top of that funnel once the seed round closes.
 
 **Three big bets, ranked by leverage:**

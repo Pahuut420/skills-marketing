@@ -2,6 +2,8 @@
 
 This doc maps every marketing-skill and every relevant MCP/API integration to the AARRR stage(s) it primarily serves. It's the source for Section 11 of every plan.
 
+> **Note on scope.** Skills below are drawn from the broader Claude Code marketplace ecosystem — not all live in this `marketingskills` repo. Skills shown without a `:` prefix (e.g., `seo-audit`) are in this repo. Skills referenced from adjacent marketplaces (e.g., `cf-skills:audit-marketing`, `vercel:agent-browser`, `compound-engineering:diagram-maker`, `marketing-skills:typefully`) are optional — substitute equivalents if not installed. When a plan references a skill that isn't available, fall back to the underlying tactic and call it out in Section 13's open decisions.
+
 ## The thesis
 
 A small team + fCMO + agentic tooling = output of a 15–20-person traditional marketing org. The skills + MCPs encode workflows that previously required dedicated headcount per channel.
@@ -180,7 +182,7 @@ The plan's Section 11 must include this table (or equivalent), specific to the c
 | Stage | Headcount | Tooling | Channels live |
 |---|---|---|---|
 | **Pre-seed / bootstrapped** | fCMO + founder team | All current tooling + marketing-skills library + MCP layer | Organic only (SEO, content, App Store, founder-led social, events, WOM, ambassador) |
-| **Seed close** | + first marketing hire (lifecycle/content owner) | + paid ad accounts (Apple Search Ads, Meta, LinkedIn) + `ads` skill activated | + paid acquisition pilot ($5–10K/mo) |
+| **Seed close** | + first marketing hire (lifecycle/content owner) | + paid ad accounts (Apple Search Ads, Meta, LinkedIn) + `ads` skill activated | + paid acquisition pilot ($5–15K/mo — see `funding-stage-unlocks.md` for canonical tiers) |
 | **Seed deployment** | + designer (potentially fractional) | + analytics expansion (Mixpanel / Amplitude if needed) | + paid scaling ($20–50K/mo) + first launches (PH, GA) |
 | **Series A** | + performance marketing lead + content lead | + dedicated tooling spend ($2–5K/mo software) + sponsored event budget | + paid scaling ($50–150K/mo) + international consideration + B2B vertical expansion |
 | **Series B+** | Full-stack marketing org (10+ people) | + agency partnerships + PR firm | + brand campaigns + acquisitions + sponsorships at category level |

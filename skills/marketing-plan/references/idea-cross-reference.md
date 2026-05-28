@@ -4,11 +4,15 @@ The `marketing-ideas` skill catalogs 139 proven marketing tactics. This doc is t
 
 The plan's Section 12 ("Tactical idea bank") uses this mapping as the base, then layers client-specific filters: brand voice rules might skip some ideas; funding stage might shift Q-status; client category might rule out others.
 
-## Primary AARRR assignment for all 139 ideas
+## How to read this doc
 
-Numbers correspond exactly to the `marketing-ideas` skill ordering. If `marketing-ideas` reorders or expands, update this doc.
+- **139 unique ideas, 144 entries.** Five ideas cross-cut multiple AARRR stages and appear under each stage they serve (#79 Early-Access Referrals, #86 Lifetime Deals, #91 In-App Upsells, #114 Moneyball Marketing, #117 Product Competitions). Each duplicate row carries a cross-cut note.
+- **"Entries" counts rows; idea IDs are unique.** Section header counts reflect rows in this doc, not unique ideas from `marketing-ideas`.
+- **Numbers correspond exactly to the `marketing-ideas` skill ordering.** If `marketing-ideas` reorders or expands, update this doc.
 
-### Acquisition (88 ideas)
+## AARRR assignment for all 139 ideas
+
+### Acquisition (116 entries)
 
 These ideas primarily serve top-of-funnel awareness, traffic, and lead generation.
 
@@ -131,7 +135,7 @@ These ideas primarily serve top-of-funnel awareness, traffic, and lead generatio
 | 133 | Investor Marketing | Developer/etc | Now (when raising) |
 | 138 | Podcast Tours | Audience-Specific | Q2+ |
 
-### Activation (7 ideas)
+### Activation (8 entries)
 
 | # | Idea | Category | Typical stage available |
 |---|---|---|---|
@@ -144,7 +148,7 @@ These ideas primarily serve top-of-funnel awareness, traffic, and lead generatio
 | 96 | Onboarding Optimization | Product-Led | Now |
 | 124 | App Store Optimization | Platforms | Now (App Store products) |
 
-### Retention (8 ideas)
+### Retention (8 entries)
 
 | # | Idea | Category | Typical stage available |
 |---|---|---|---|
@@ -157,7 +161,7 @@ These ideas primarily serve top-of-funnel awareness, traffic, and lead generatio
 | 135 | Support as Marketing | Developer/etc | Q2+ |
 | 134 | Certifications | Developer/etc | Q3+ (cross-cuts Referral) |
 
-### Referral (5 ideas)
+### Referral (5 entries)
 
 | # | Idea | Category | Typical stage available |
 |---|---|---|---|
@@ -167,22 +171,23 @@ These ideas primarily serve top-of-funnel awareness, traffic, and lead generatio
 | 93 | Viral Loops | Product-Led | Q3+ |
 | 137 | Two-Sided Referrals | Audience-Specific | Q2+ |
 
-### Revenue (3 ideas — most monetization is strategy not tactic)
+### Revenue (2 entries — most monetization is strategy not tactic)
 
 | # | Idea | Category | Typical stage available |
 |---|---|---|---|
-| 86 | Lifetime Deals | Launches | Generally off-brand |
 | 91 | In-App Upsells | Product-Led | Q2+ (cross-cuts Activation) |
 | 132 | Price Localization | International | Q4+ |
 
-### Cross-cutting / brand foundation (2 ideas)
+> **Skipped from Revenue:** #86 Lifetime Deals appears under Launches (Acquisition section) only. It's generally off-brand for subscription products because it damages LTV math; recommend in Section 12's Skip list with rationale, not in stage totals.
+
+### Cross-cutting / brand foundation (2 entries)
 
 | # | Idea | Category | Typical stage available |
 |---|---|---|---|
 | 114 | Moneyball Marketing | Unconventional | Ongoing methodology |
 | 139 | Customer Language | Audience-Specific | Now (foundational) |
 
-### Developer-specific / dev tool products (2 ideas)
+### Developer-specific / dev tool products (2 entries)
 
 | # | Idea | Category | Use when |
 |---|---|---|---|
@@ -249,12 +254,12 @@ After all five AARRR tables + skip list:
 ## How to maintain this doc
 
 If `marketing-ideas` adds new ideas (it's a living skill — the 139 may become 145 or 160 over time):
-1. Read `~/.claude/skill-packs/marketingskills/skills/marketing-ideas/references/ideas-by-category.md`
+1. Read `skills/marketing-ideas/references/ideas-by-category.md` in the `marketingskills` repo
 2. Assign each new idea to a primary AARRR stage using the rules above
 3. Add to this doc's tables
 4. Update SKILL.md's idea-count reference
 
 ## Sources
 
-- `~/.claude/skill-packs/marketingskills/skills/marketing-ideas/SKILL.md`
-- `~/.claude/skill-packs/marketingskills/skills/marketing-ideas/references/ideas-by-category.md`
+- `skills/marketing-ideas/SKILL.md` (in the `marketingskills` repo)
+- `skills/marketing-ideas/references/ideas-by-category.md` (in the `marketingskills` repo)
