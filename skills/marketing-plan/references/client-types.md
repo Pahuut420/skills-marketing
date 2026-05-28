@@ -109,7 +109,7 @@ The 13-section plan structure stays consistent across client types. What changes
 ## Archetype 3 — Hybrid Hardware + Software
 
 ### Core characteristics
-- Physical product + software companion (e.g., Olo's eye mask + app)
+- Physical product + software companion (e.g., Quietude's eye mask + app)
 - Hardware as a distribution wedge (lower price, easier first purchase)
 - Software as the LTV (recurring revenue)
 - Blended CAC across both surfaces
@@ -119,7 +119,7 @@ The 13-section plan structure stays consistent across client types. What changes
 **Acquisition:**
 - Shopify storefront SEO (hardware product pages target consumer search)
 - Amazon listing (high-discovery, takes margin)
-- PR amplification (hardware is photogenic — Bryan Johnson-style endorsements move volume)
+- PR amplification (hardware is photogenic — high-profile influencer endorsements move volume)
 - Paid social for hardware (Meta + Instagram, eye-catching creative)
 
 **Activation:**
@@ -359,9 +359,9 @@ The 13-section plan structure stays consistent across client types. What changes
 
 When you start drafting Sections 4–8 (AARRR), identify the client's archetype (or hybrid if applicable) and lean into the patterns above.
 
-**Hybrid cases are common.** Olo is "Hybrid hardware + software" with significant overlap to "Deep-tech / scientific / clinical" (because of the peer-reviewed study + clinical positioning). The plan blends emphases from both archetypes.
+**Hybrid cases are common.** Quietude is "Hybrid hardware + software" with significant overlap to "Deep-tech / scientific / clinical" (because of the peer-reviewed study + clinical positioning). The plan blends emphases from both archetypes.
 
-When in doubt, lead with the archetype that best fits the *primary monetization model*. Olo's primary monetization is software subscription (with hardware as the wedge), so the D2C consumer app + hardware-hybrid patterns dominate, with deep-tech credibility moves layered in.
+When in doubt, lead with the archetype that best fits the *primary monetization model*. Quietude's primary monetization is software subscription (with hardware as the wedge), so the D2C consumer app + hardware-hybrid patterns dominate, with deep-tech credibility moves layered in.
 
 ## When the client doesn't fit cleanly
 

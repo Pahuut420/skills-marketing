@@ -230,8 +230,8 @@ Use the "Typical stage available" column as the default. Shift earlier if client
 ### Step 4 — Write the client-specific note
 
 Every "Now / Q2 / Q3+" idea gets a one-line client-specific note. Examples:
-- For idea #11 Competitor Comparison Pages: "Olo vs. Calm / Headspace / Brain.fm / Endel / Wavepaths — high-intent SERPs"
-- For idea #133 Investor Marketing: "Markus's $3M seed raise — leverage angel backchannel for PR + intros"
+- For idea #11 Competitor Comparison Pages: "Quietude vs. Calm / Headspace / Brain.fm / Endel / Wavepaths — high-intent SERPs"
+- For idea #133 Investor Marketing: "Alex's seed raise — leverage angel backchannel for PR + intros"
 - For idea #15 Engineering as Marketing: "HRV interpretation guide; nervous system self-assessment; sound bath finder directory"
 
 ### Step 5 — Sum the bank

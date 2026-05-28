@@ -23,7 +23,7 @@ Don't default to "ARR" or "MRR" alone. Those are outcomes, not norths. Pick some
 - Alternative: "Day-35 paid users from cohort × LTV"
 - Why: monthly subscription metrics are volatile; cohort × LTV smooths it
 
-### Hybrid hardware + software (e.g., Olo)
+### Hybrid hardware + software (e.g., Quietude)
 - **Blended LTV / blended CAC across hardware + software** — captures the wedge thesis
 - Alternative: "Hardware-buyers-to-subscriber conversion × blended margin"
 - Why: hardware revenue isn't free (cost to make); subscription revenue isn't expensive to acquire if hardware funds it

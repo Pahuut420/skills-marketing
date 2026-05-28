@@ -219,7 +219,7 @@ If a founder is over-funded for their stage:
 
 Some companies skip tiers:
 - **Notable founder** raising larger-than-typical rounds — can jump from Tier 1 to Tier 3 directly
-- **Hardware company** with PR moment — can deploy at Tier 3 levels with the right product moment (e.g., a Bryan Johnson-style endorsement)
+- **Hardware company** with PR moment — can deploy at Tier 3 levels with the right product moment (e.g., a high-profile longevity-influencer endorsement)
 - **B2B SaaS post-LOI** with named enterprise contracts — can fund pilot deployment from contract value
 
 If the client is in a tier-skip situation, name it explicitly in the plan rather than forcing them into the standard ladder.

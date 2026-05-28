@@ -28,7 +28,7 @@ Invoke this skill when:
 ```
 
 Examples:
-- `/marketing-plan olo.app`
+- `/marketing-plan quietude.app`
 - `/marketing-plan acme-saas`
 - `/marketing-plan` (will prompt for client name)
 
