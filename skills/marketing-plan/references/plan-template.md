@@ -82,15 +82,20 @@ Table of every person with marketing surface area:
 | Person | Role | Marketing surface area |
 |---|---|---|
 
-Be honest about gaps. If there's no dedicated marketing hire yet, name when one becomes necessary and what role.
+Be honest about gaps. If there's no dedicated marketing hire yet, name when one becomes necessary and what role (see `references/team-and-agency-model.md` — first hire should be π-shaped strategist titled Manager or Lead, not VP/CMO).
 
 ### Marketing budget (current)
 - Paid acquisition: $X/mo
 - Tooling stack: list with estimated cost
 - Retainers / fCMO: list
 - Headcount: list
+- Blended CAC: $X (must include salaries, content costs, tools, retainers — not just paid spend; see `references/budget-planning.md` for the calculation)
+- Current spend as % of ARR: X% (compare against 5–40% range)
 
 State the funding-stage tier this maps to (see `references/funding-stage-unlocks.md`). Implication: what 90-day plan must produce *without* lever pulls that require future budget.
+
+### Phase of SaaS growth
+Name the current phase: $0–10K ARR / $10K–100K / $100K–1M / $1M–$10M / $10M+. Each phase has its own binding constraint and dominant growth pattern (see `references/growth-patterns.md`). Section 10 sequences the move into the next phase.
 
 ### What's already done (acknowledge, then build on)
 Table:
@@ -246,6 +251,19 @@ Quarter-by-quarter outcome state (Q1 / Q2 / Q3 / Q4).
 - B2B case studies + sales material
 - Long-term value pools (data licensing, enterprise expansion) — flagged not executed in 12-month plan
 
+### Unit economics
+Required table:
+
+| Metric | Value | Note |
+|---|---|---|
+| ARPC (avg monthly revenue per customer) | $X | Pulled from Stripe / billing |
+| Blended CAC | $X | Includes all marketing costs, not just paid |
+| Annual retention rate | X% | 1 − annual churn |
+| LTV (rough) | $X | ARPC × 12 / annual churn |
+| LTV / CAC | X | Health benchmark: > 3 |
+
+These feed the budget math in Section 10. If any of these are unknown, flag in Section 13 as top open decision.
+
 ### Skills + tools
 `pricing`, `paywalls`, `sales-enablement`, `revops`, `ab-testing`, etc.
 
@@ -278,13 +296,21 @@ Second-order moves. Layered tactics. 90-day review prep.
 
 ## Section 10 — 12-month outlook
 
-**Purpose:** Quarterly milestones with explicit funding-stage capability unlocks named.
+**Purpose:** Quarterly milestones with explicit funding-stage capability unlocks named, anchored against a defensible growth pattern.
 
-**Length:** Four sub-sections, one per quarter. ~250–400 words each.
+**Length:** Four sub-sections, one per quarter. ~250–400 words each. Plus a short framing paragraph at the top naming the budget method and growth pattern.
 
-**Structure (per quarter):**
+### Framing (top of Section 10)
 
-### Q{N} — Months {X}–{Y}
+State explicitly:
+- **Budget method used.** Method 1 (Revenue-Based 5–40% of ARR) or Method 2 (Goal-Based formula). See `references/budget-planning.md`. Show the math.
+- **Annual budget total** + the experimental buffer (+10–20%).
+- **Resulting end-of-year ARR goal.** Honest forecast, not a guarantee — see the forecasting reality check in `references/measurement-framework.md`.
+- **Growth pattern expected.** Linear (predictable $X MRR added per month), step-function (plateau between deliberate jumps), or layered S-curves. For VC-backed Series A+, anchor against 3-3-2-2-2 and show whether the plan matches it or explicitly chooses a different trajectory. See `references/growth-patterns.md`.
+
+### Structure (per quarter)
+
+#### Q{N} — Months {X}–{Y}
 
 **Funding state:** {tier} per `funding-stage-unlocks.md`
 
@@ -294,6 +320,8 @@ Second-order moves. Layered tactics. 90-day review prep.
 - Bulleted outcome list (5–8 items)
 
 **KPI targets:** 3–5 specific numerical targets.
+
+**Channel/Product/Market S-curve position:** Which curves are growing, which are plateauing, which is the next one being staged for this quarter (see `growth-patterns.md` — layering principle).
 
 ---
 
@@ -334,6 +362,20 @@ Pick one operational moment that proves the stack works (e.g., "Customer.io MCP 
 | (current) | (list) | (list) | (list) |
 | (next round) | (delta) | (delta) | (delta) |
 | ... | ... | ... | ... |
+
+### Team and agency model (RACI)
+
+Apply the principle from `references/team-and-agency-model.md`: strategy in-house, execution often outsourced.
+
+| Function | Owned by (internal strategic role) | Executed by (IC / contractor / agency) |
+|---|---|---|
+| Growth marketing (demand engine) | | |
+| Product marketing (story engine) | | |
+| Content marketing (trust engine) | | |
+
+If the team is missing a strategic owner for one of these functions, the first 90-day move (Section 9) should be the hire — Manager or Lead title, π-shaped if possible, not VP/CMO.
+
+If execution capacity is the gap, name the contractor or small niche agency in the right cell rather than the team's existing IC.
 
 Pull from `references/funding-stage-unlocks.md`.
 

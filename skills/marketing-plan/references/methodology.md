@@ -137,11 +137,14 @@ For every gap in the materials, ask the user. The minimum intake covers ten topi
 - Advisors who touch marketing?
 - Agencies / contractors / fractionals?
 - Where are the obvious gaps?
+- For the team's current marketing owner (if there is one): is the shape π-shaped (two deep skill sets), T-shaped (one deep, broad), or tactical-only? See `team-and-agency-model.md` for the framework that informs Section 11 RACI and the first-hire recommendation in Section 9.
 
 #### Intake 6 — Budget
 - Current monthly marketing spend, broken down: paid acquisition, tools, retainers, headcount?
 - Budget tier this maps to (see `funding-stage-unlocks.md`)?
 - What budget unlocks when the next round closes?
+- Blended CAC if known (including salaries, content costs, tools, retainers — not just paid ad spend). If unknown, flag as the top Section 13 open decision — every revenue projection depends on it.
+- ARPC, annual retention rate (or churn rate), so the budget math in `budget-planning.md` can be applied to Section 8 (Revenue) and Section 10 (12-month outlook).
 
 #### Intake 7 — Channels currently active
 - Acquisition: organic SEO, paid search, paid social, content, social, partnerships, events, PR, ambassadors, etc. — for each, status (live / paused / never tried)

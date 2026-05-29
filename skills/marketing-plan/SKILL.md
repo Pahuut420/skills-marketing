@@ -127,19 +127,48 @@ Standard tiers in `references/funding-stage-unlocks.md`:
 
 Use these as anchors. Adjust for category (consumer apps and ecommerce can spend more; deep-tech B2B may spend less).
 
+## Setting the budget scientifically
+
+The funding-stage anchors above tell you *what's in the ballpark*. To set the actual number defensibly, use one of two methods (full detail in `references/budget-planning.md`):
+
+1. **Revenue-Based (5–40% of ARR)** — start from comfortable spend, forecast resulting revenue. Best when historical CAC data exists.
+2. **Goal-Based** — reverse-engineer the budget from the revenue target. Formula: `[(New ARR / (ARPC × 12)) × CAC] / annual retention rate`. Best for fundraising or when the goal is fixed.
+
+Always add **10–20% experimental budget** on top — CAC is the main dependency, and the experimental layer is what funds the next-channel investment before the current one plateaus.
+
+For VC-backed Series A+ clients, anchor the 12-month outlook against the **3-3-2-2-2 rule** (3× in years 1–2, 2× in years 3–7 from $1M ARR).
+
+## Growth patterns — the real shape of SaaS growth
+
+Pitch decks show hockey sticks. Real growth is a series of S-curves with plateaus between them. Full framework in `references/growth-patterns.md`. Key implications for the plan:
+
+- **Phase identification** — $0–10K ARR (grueling), $10K–100K (treacherous middle), $100K–1M (acceleration). Section 3 names the current phase; Section 10 sequences the next.
+- **Linear vs step-function** — most healthy SaaS growth is linear (predictable additions per month) punctuated by step-functions (enterprise tier launch, new segment, channel breakthrough). The plan should describe both honestly — not promise exponential.
+- **S-curve layering** — Channel × Product × Market. Start the next S-curve while the current one is still growing. Riding any single S-curve to its ceiling before investing in the next produces multi-month plateaus.
+
+## Team and agency model
+
+Strategy lives in-house. Execution can — and often should — be outsourced. Full framework in `references/team-and-agency-model.md`. Three implications for every plan:
+
+1. **First hire is a strategist, not a tactician.** Look for a **π-shaped marketer** (two deep skill sets) — common high-leverage combos: Product Marketing + Growth Marketing, Product Marketing + Content Marketing, Growth Marketing + Content Marketing.
+2. **Title conservatively.** First marketing hire is almost always Manager or Lead, not VP or CMO. Inflated titles paint the org into a corner when you scale.
+3. **Use contractors and small niche agencies for execution.** Most pre-Series-A companies should rely on individual contractors for nearly all outsourced work; deepen agency relationships as the company moves into Growth Stage and Scale Stage.
+
 ## What every plan must customize
 
 A generic plan is a failed plan. Every plan must explicitly customize for:
 
-1. **Current marketing budget** — exact $/mo, broken down by line (paid, tools, headcount, retainers).
-2. **Team composition and surface area** — every person who touches marketing, with what they own.
-3. **What the client is currently doing** — by channel, with status (working / not / TBD).
-4. **What they've already done that should be acknowledged** — past launches, PR moments, content, partnerships. Don't write a plan that ignores work they're proud of.
-5. **Future funding milestones** — when the next round closes, what budget tier that unlocks.
-6. **The 50+ marketing skills mapped to specific moves** — every move in the AARRR sections names the skill that executes it.
-7. **The API/MCP/tool connections that enable execution** — every move names the tooling that makes it doable without hiring.
+1. **Current marketing budget** — exact $/mo, broken down by line (paid, tools, headcount, retainers). Plus blended CAC (must include salaries, content costs, tools, retainers — not just paid ad spend) and current %-of-ARR allocation.
+2. **Unit economics** — ARPC, annual retention rate, LTV. These feed the budget math in Section 8 and Section 10.
+3. **Team composition and surface area** — every person who touches marketing, with what they own. Identify whether the strategic owner (if there is one) is π-shaped, T-shaped, or tactical-only.
+4. **What the client is currently doing** — by channel, with status (working / not / TBD).
+5. **What they've already done that should be acknowledged** — past launches, PR moments, content, partnerships. Don't write a plan that ignores work they're proud of.
+6. **Phase of SaaS growth** — $0–10K ARR / $10K–100K / $100K–1M / $1M+. Each phase has its own binding constraint.
+7. **Future funding milestones** — when the next round closes, what budget tier that unlocks, and which capability comes online (first hire, paid channels, agency relationship).
+8. **The marketing skills mapped to specific moves** — every move in the AARRR sections names the skill that executes it.
+9. **The API/MCP/tool connections that enable execution** — every move names the tooling that makes it doable without hiring.
 
-If you can't confirm any of these in INIT, list them in Section 13's "Open decisions" — never gloss over them.
+If you can't confirm any of these in INIT, list them in Section 13's "Open decisions" — never gloss over them. **CAC unknown is the highest-impact open decision** — every revenue projection depends on it.
 
 ## Common client-type variations
 

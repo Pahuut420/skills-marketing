@@ -27,7 +27,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | launch | 2.0.0 | 2026-05-05 |
 | lead-magnets | 2.0.0 | 2026-05-05 |
 | marketing-ideas | 2.0.0 | 2026-05-05 |
-| marketing-plan | 1.0.0 | 2026-05-27 |
+| marketing-plan | 1.1.0 | 2026-05-29 |
 | marketing-psychology | 2.0.0 | 2026-05-05 |
 | onboarding | 2.0.0 | 2026-05-05 |
 | ads | 2.0.1 | 2026-05-26 |

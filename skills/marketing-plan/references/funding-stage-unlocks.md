@@ -4,6 +4,11 @@ Every marketing plan must include explicit "what changes when funding closes / w
 
 This doc defines the standard tiers. Use them as anchors, adjust for client category and unit economics.
 
+**Related docs:**
+- `budget-planning.md` — two scientific methods for setting the actual budget number (Revenue-Based 5–40%, or Goal-Based reverse-engineered from the revenue target), CAC calculation, experimental buffer
+- `growth-patterns.md` — the real shape of SaaS growth by phase ($0–10K / $10K–100K / $100K–1M+), linear vs step-function, S-curve layering
+- `team-and-agency-model.md` — what each tier means for team composition, the first marketing hire, and the in-house vs outsource ratio
+
 ## Why funding stage matters in a marketing plan
 
 Most marketing plans are written as if budget is unconstrained. That's a failure mode for early-stage clients — it produces aspirational lists rather than executable roadmaps.
