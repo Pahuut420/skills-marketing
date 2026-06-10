@@ -269,9 +269,14 @@ LinkedIn and X don't expose useful public APIs, but you can drive a real browser
 
 The user should maintain a list of sources somewhere persistent at `.agents/listening-sources.md` (or `.claude/listening-sources.md`). Claude reads it when running the daily loop.
 
-**A ready-to-fill template lives at [listening-sources-template.md](listening-sources-template.md).** Copy it into the project and edit:
+**A ready-to-fill template lives at [listening-sources-template.md](listening-sources-template.md).** Copy it into the project and edit. The source path depends on how the skill was installed:
 
 ```bash
+# Plugin / marketplace install (most common):
+cp .agents/skills/social/references/listening-sources-template.md .agents/listening-sources.md
+# .claude/ install:
+cp .claude/skills/social/references/listening-sources-template.md .agents/listening-sources.md
+# Working inside the marketingskills repo:
 cp skills/social/references/listening-sources-template.md .agents/listening-sources.md
 ```
 

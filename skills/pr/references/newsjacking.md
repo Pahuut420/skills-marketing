@@ -64,7 +64,7 @@ Target journalists: [list with rationale]
 
 ## Newsworthiness Scoring Rubric
 
-Score each candidate 1–10 on five dimensions. Sum and rank.
+Score each candidate 1–10 on five dimensions, multiply by the weight, then sum. Max possible: 80 (10 × the 8x weight total).
 
 | Dimension | What it measures | Weight |
 |-----------|------------------|--------|
@@ -74,7 +74,7 @@ Score each candidate 1–10 on five dimensions. Sum and rank.
 | **Authority** | Do you have data, customers, or experience to back it? | 1x |
 | **Reach potential** | Will this story keep growing or has it peaked? | 1x |
 
-**Threshold:** 30/40 or higher. Below that, skip.
+**Threshold:** weighted total ≥ 50/80. Below that, skip.
 
 **Auto-disqualify if:**
 - The story is about something tragic
