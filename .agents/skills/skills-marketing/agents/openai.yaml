@@ -1,0 +1,6 @@
+interface:
+  display_name: "Skills Marketing"
+  short_description: "Repo-specific patterns and workflows for skills-marketing"
+  default_prompt: "Use the skills-marketing repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
