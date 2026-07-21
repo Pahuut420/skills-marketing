@@ -42,6 +42,7 @@ Current versions of all skills. Agents can compare against local versions to che
 | prospecting | 1.1.0 | 2026-07-13 |
 | public-relations | 1.0.0 | 2026-06-10 |
 | referrals | 2.0.0 | 2026-05-05 |
+| repo-cartographer | 0.1.0 | 2026-07-21 |
 | revops | 2.0.0 | 2026-05-05 |
 | sales-enablement | 2.0.1 | 2026-06-16 |
 | schema | 2.0.0 | 2026-05-05 |
@@ -53,6 +54,10 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.1.0 | 2026-07-14 |
 
 ## Recent Changes
+
+### 2.9.0 (2026-07-21)
+
+- Added `repo-cartographer` skill (v0.1.0) — maps and evaluates repositories for adoption fit. Five-step pipeline: pack with repomix, trace entry points and modules, analyze dependencies and license, apply 5-criteria rubric (fit/maturity/alignment/risk/effort), and emit structured verdict. Recommendations: `rec:adopt`, `rec:watch`, or `rec:drop`. Includes 5 framework guides, 5 persona cards (Cartographer, Tracer, Boundary-Analyzer, Security-Auditor, Evaluator), JSON schema, evaluation fixtures (prompt injection defense, copyleft license gate), and human-readable report template. Read-only analysis; never marks repos adopted without human decision. Total skills: 48.
 
 ### 2.8.12 (2026-07-16)
 
