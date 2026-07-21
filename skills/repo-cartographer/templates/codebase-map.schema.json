@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "codebase_map verdict",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary", "recommendation"],
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "entry_points": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "key_modules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tech_stack": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "eval_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "eval_note": {
+      "type": "string"
+    },
+    "recommendation": {
+      "type": "string",
+      "enum": ["rec:adopt", "rec:watch", "rec:drop"]
+    },
+    "license": {
+      "type": "string"
+    }
+  }
+}
